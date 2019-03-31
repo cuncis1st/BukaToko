@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.boss.cuncis.bukatoko.R;
 import com.boss.cuncis.bukatoko.activity.TransDetailActivity;
 import com.boss.cuncis.bukatoko.activity.UploadActivity;
+import com.boss.cuncis.bukatoko.activity.WaybillActivity;
 import com.boss.cuncis.bukatoko.data.model.transaction.TransUser;
 
 import java.util.List;
@@ -44,9 +45,9 @@ public class TransPaidAdapter extends RecyclerView.Adapter<TransPaidAdapter.Tran
             holder.btnAction.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    Intent intent = new Intent(context, UploadActivity.class);
-//                    intent.putExtra("TRANSACTION_CODE", data.getTransaction_code());
-//                    context.startActivity(intent);
+                    Intent intent = new Intent(context, WaybillActivity.class);
+                    intent.putExtra("WAYBILL", data.getResi_code());
+                    context.startActivity(intent);
                 }
             });
         } else {
